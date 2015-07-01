@@ -14,6 +14,7 @@ $(document).on('ready', function() {
 // }
 // console.log( getName(info) );
 
+//------------------------------------------------------------------------------------
 
 
 // 2. Write a function called 'totalLetters' which takes an array of strings and returns the total number of letters in all strings.
@@ -47,9 +48,26 @@ $(document).on('ready', function() {
 	totalLetters(jsIsCool);	
 	totalLetters(funcFail);
 
-		
+//------------------------------------------------------------------------------------
 
+//	3.	Write a function called 'keyValue' which takes two arguments and returns a new object with a key of the first argument and the value of the second argument.
+	//keyValue('city', 'Denver') should return Object {city: "Denver"}
+
+		// 2. create an empty object that will take the values of the two arguments
+		var newObj = {};
+
+		// 1. create function called 'keyValue' that takes two arguments
+		var keyValue = function(key, value){
+
+		// 3. take the first argument and set it to the object key and the second to the value
+		newObj[key] = value;
+		return newObj;
+	}
 	
+	// 5. return the new object containing the two args set as the key:Value pair
+	console.log( keyValue('city', 'Denver'));
+
+//------------------------------------------------------------------------------------
 
 
 
