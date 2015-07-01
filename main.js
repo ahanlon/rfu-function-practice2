@@ -91,7 +91,7 @@ $(document).on('ready', function() {
 
 //------------------------------------------------------------------------------------
 
-//	Write a function called 'removeM' which takes a single string argument and removes all 'm' characters from the string. The function won't actually modify
+//	5.  Write a function called 'removeM' which takes a single string argument and removes all 'm' characters from the string. The function won't actually modify
 	// removeM('family') should return 'faily'
 	// removeM('memory') should return 'eory'
 
@@ -111,6 +111,33 @@ $(document).on('ready', function() {
 	removeM('family');
 	removeM('Memory');
 	
+//------------------------------------------------------------------------------------
+
+// 6. Write a function called 'printObject' which takes a single object argument and console.log's each key-value pair in the format key is value on separate lines.
+	// printObject({ a: 10, b: 20, c: 30 }) should print:
+	// a is 10
+	// b is 20
+	// c is 30
+	// printObject({ firstName: 'pork', lastName: 'chops' }) should print:
+	// firstName is pork
+	// lastName is chops
+
+	// 1. create a function called 'printObject'(obj)
+	var printObject = function(obj){
+		// 2. loop over the object to identify each key: value pair
+		for ( key in obj ){
+		var objCon = key + ' is ' + obj[key];
+		// 3. console.log the key value pair in the format "key ' is ' value" for each loop		
+		console.log(objCon);
+		}
+	}
+	printObject({ a: 10, b: 20, c: 30 });
+	printObject({ firstName: 'pork', lastName: 'chops' });
+	
+
+
+	
+
 
 
 
