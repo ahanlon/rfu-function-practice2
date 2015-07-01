@@ -89,6 +89,31 @@ $(document).on('ready', function() {
 	
 
 
+//------------------------------------------------------------------------------------
+
+//	Write a function called 'removeM' which takes a single string argument and removes all 'm' characters from the string. The function won't actually modify
+	// removeM('family') should return 'faily'
+	// removeM('memory') should return 'eory'
+
+	// 1. Create a fucntion called 'removeM('string')
+	var removeM = function(string){
+		var newStr = '';
+		// 2. check each position in the string to identify the letter m in the string
+		for (i = 0; i < string.length; i++){
+
+			// 3. remove all the letter m and then return the rest of the string
+			if ( string[i].toLowerCase() != "m" ){
+				newStr += string[i];
+			}
+		}
+		console.log( newStr);
+	}
+	removeM('family');
+	removeM('Memory');
+	
+
+
+
 
 
 
