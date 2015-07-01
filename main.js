@@ -69,6 +69,25 @@ $(document).on('ready', function() {
 
 //------------------------------------------------------------------------------------
 
+// 4.	Write a function called 'negativeIndex' which takes an array and a negative number, and returns the value from the array at the given negative index, as if the array was circular, i.e. arr.length+num.
+	// negativeIndex(['a', 'b', 'c', 'd', 'e'], -2) should return 'd'
+	//negativeIndex(['jerry', 'sarah', 'sally'], -1) should return 'sally'
+
+	// 2. define the array(s) that will be called.
+	var letters = ['a', 'b', 'c', 'd', 'e'];
+	var names = ['jerry', 'sarah', 'sally'];
+
+	// 1. create a function called 'negativeIndex'(array, -#)
+	var negativeIndex = function(array, index){
+		// 3. create the effect of a circular array by adding the length of the array to the index arg
+		var arrayCirc = array.length + index;
+		// 4. return the position of the value of the new position created
+		return array[arrayCirc];
+	}
+	console.log( negativeIndex(letters, -2) );
+	console.log( negativeIndex(names, -1) );
+	
+
 
 
 
