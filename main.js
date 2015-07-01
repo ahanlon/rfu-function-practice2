@@ -133,8 +133,33 @@ $(document).on('ready', function() {
 	}
 	printObject({ a: 10, b: 20, c: 30 });
 	printObject({ firstName: 'pork', lastName: 'chops' });
-	
 
+//------------------------------------------------------------------------------------
+
+//	7.	Write a function called 'vowels' which takes a string and returns an array of all the vowels in the string, including duplicates.
+	//	vowels('alabama') should return ['a', 'a', 'a', 'a']
+	//	vowels('What evil odd ducks!') should return ['a', 'e', 'i', 'o', 'u']
+
+	var strVowels = [];
+	// 1. create a function called 'vowels'(string)
+	var vowels = function(string){
+
+		// 2. loop over the string to identify vowels
+		for (i = 0; i < string.length; i++){
+			if (string[i] === 'a' || string[i] === 'e' || string[i] === 'i' || string[i] === 'o' || string[i] === 'u') {
+
+				// 3. push vowels into an array 
+				strVowels.push(string[i]);
+			}
+		}
+		console.log(strVowels);
+	}
+	// vowels('alabama');
+	vowels('What evil odd ducks!');
+
+
+	
+	
 
 	
 
