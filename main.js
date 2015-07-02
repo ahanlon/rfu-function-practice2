@@ -164,22 +164,7 @@ $(document).on('ready', function() {
 	//	twins(['a', 'a', 'b', 'c', 'd', 'd']) should return false
 	//	twins(['a', 'a', 'b', 'z']) should return false
 	//	twins(['a', 'a', undefined]) should return false
-	
-	
-	
-		// for ( i = 0; i < array.length; i+=2)
 
-	
-	// var adjPairs = function(){
-	// 	if (array[i] === array[i+=1]){
-	// 		return true;
-	// 	}
-	// 	else {
-	// 		return false;
-	// 	}
-	// }
-	// 4. if all are adjacent pairs return true
-	// 5. if not, return false.
 
 	// 1. create function called 'twins'(array)
 	var twins = function(array){
@@ -188,7 +173,7 @@ $(document).on('ready', function() {
 		// 2. loop over the array 
 		for ( i = 0; i < array.length; i+=2){
 
-			// 3. examine array contents to identify adjacent pairs
+			// 3. examine array contents to identify adjacent pairs & if array length is even number
 			if (array[i] != array[i+1] || array.length%2 != 0){
 					// 4. If this argument is false, push the value false to the falsey array
 					falsey.push(false);
@@ -209,8 +194,30 @@ $(document).on('ready', function() {
 	console.log( twins(['a', 'a', undefined]) );
 
 
+//------------------------------------------------------------------------------------
 
+// 9.	Write a function called 'or' which takes an array of booleans and returns true if any one of them is true. Given an empty array, return false. If you find an item that is true, the function should return true immediately and not continue checking further values.
+	//	or([false, false, true, false]) should return true
+	//	or([false, false, false]) should return false
+	//	or([]) should return false
 
+	// 1. create function 'or(array)'
+	// 2. loop over array to check each bolean value
+	// 3. return true if the array contains a true value
+	// 4. the the function should immeadiately return true and not continue as soon as it finds the first true.
+
+	var or = function(array){
+		for (i = 0; i < array.length; i++) {
+			if (array[i]){
+				return true;
+			}
+		}
+			return false;
+	}
+	
+console.log( or([false, false, true, false]) );
+console.log( or([false, false, false]) );
+console.log( or([]) );
 
 
 
