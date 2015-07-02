@@ -189,7 +189,7 @@ $(document).on('ready', function() {
 		for ( i = 0; i < array.length; i+=2){
 
 			// 3. examine array contents to identify adjacent pairs
-			if (array[i] != array[i+1] || array[i] === undefined){
+			if (array[i] != array[i+1] || array.length%2 != 0){
 					// 4. If this argument is false, push the value false to the falsey array
 					falsey.push(false);
 				}
