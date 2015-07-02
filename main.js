@@ -220,24 +220,43 @@ console.log( or([false, false, false]) );
 console.log( or([]) );
 
 
+//------------------------------------------------------------------------------------
+
+// 10.	Write a function called 'unique' which takes an array of strings, and returns a new array consisting of the unique values (no duplicates).
+	// unique(['a', 'b', 'a', 'c', 'd', 'd']) should return ['a', 'b', 'c', 'd']
+	// unique(['todd', 'avery', 'maria', 'avery']) should return ['todd', 'avery', 'maria']
+
+
+	// create function 'unique'(array) array
+	var unique = function(array){
+
+		// sort array by value
+		var compare = function(a, b){
+			if (a <  b) {
+	   			return -1;
+	  		}
+	  		if (a > b) {
+	    		return 1;
+	  		}
+	  		return 0;
+			}
+		var sortedArray = array.sort(compare())
+
+		var newArray = [];
+
+		// loop over array to identify unique/duplicate values
+		for (i = 0; i < sortedArray.length; i++)
+		if (sortedArray[i] != sortedArray[i+1] ){
+					//push unique values to new array
+					newArray.push(array[i]);
+				}
+		return newArray
+	}
+
+	console.log( unique(['a', 'b', 'a', 'c', 'd', 'd']) );
+	console.log( unique(['todd', 'avery', 'maria', 'avery']) );
 
 	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
