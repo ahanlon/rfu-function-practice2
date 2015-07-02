@@ -165,11 +165,11 @@ $(document).on('ready', function() {
 	//	twins(['a', 'a', 'b', 'z']) should return false
 	//	twins(['a', 'a', undefined]) should return false
 	
-	// 1. create function called 'twins'(array)
-	// 2. loop over the array 
+	
+	
 		// for ( i = 0; i < array.length; i+=2)
 
-	// 3. examine array contents to identify adjacent pairs
+	
 	// var adjPairs = function(){
 	// 	if (array[i] === array[i+=1]){
 	// 		return true;
@@ -181,27 +181,37 @@ $(document).on('ready', function() {
 	// 4. if all are adjacent pairs return true
 	// 5. if not, return false.
 
-	var falsey = [];
+	// 1. create function called 'twins'(array)
 	var twins = function(array){
-		
+		var falsey = [];
+
+		// 2. loop over the array 
 		for ( i = 0; i < array.length; i+=2){
-			var adjPairs = function(){
-				if (array[i] != array[i+1] ){
-					falsey.push();
+
+			// 3. examine array contents to identify adjacent pairs
+			if (array[i] != array[i+1] || array[i] === undefined){
+					// 4. If this argument is false, push the value false to the falsey array
+					falsey.push(false);
 				}
 			}
-		}
-console.log(falsey.length);
+		// 5. if the falsey array contains a false, return false, otherwise, the array is still empty which means all adjacent pairs are equal so return true.
 		if ( falsey.length > 0 ){
 			return false;
 		}
 		else {
 			return true;
 		}
-	console.log(falsey.length);
 	}
-	// console.log( twins(['a', 'a', 'b', 'b', 'c', 'c']) );
+
+	console.log( twins(['a', 'a', 'b', 'b', 'c', 'c']) );
 	console.log( twins(['a', 'a', 'b', 'c', 'd', 'd']) );
+	console.log( twins(['a', 'a', 'b', 'z']) );
+	console.log( twins(['a', 'a', undefined]) );
+
+
+
+
+
 
 
 	
