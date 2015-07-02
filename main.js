@@ -157,9 +157,52 @@ $(document).on('ready', function() {
 	// vowels('alabama');
 	vowels('What evil odd ducks!');
 
+//------------------------------------------------------------------------------------
 
+// 8.	Write a function called 'twins' which takes an array and returns true if every adjacent pair of items in the array is the same.
+	//	twins(['a', 'a', 'b', 'b', 'c', 'c']) should return true
+	//	twins(['a', 'a', 'b', 'c', 'd', 'd']) should return false
+	//	twins(['a', 'a', 'b', 'z']) should return false
+	//	twins(['a', 'a', undefined]) should return false
 	
-	
+	// 1. create function called 'twins'(array)
+	// 2. loop over the array 
+		// for ( i = 0; i < array.length; i+=2)
+
+	// 3. examine array contents to identify adjacent pairs
+	// var adjPairs = function(){
+	// 	if (array[i] === array[i+=1]){
+	// 		return true;
+	// 	}
+	// 	else {
+	// 		return false;
+	// 	}
+	// }
+	// 4. if all are adjacent pairs return true
+	// 5. if not, return false.
+
+	var falsey = [];
+	var twins = function(array){
+		
+		for ( i = 0; i < array.length; i+=2){
+			var adjPairs = function(){
+				if (array[i] != array[i+1] ){
+					falsey.push();
+				}
+			}
+		}
+console.log(falsey.length);
+		if ( falsey.length > 0 ){
+			return false;
+		}
+		else {
+			return true;
+		}
+	console.log(falsey.length);
+	}
+	// console.log( twins(['a', 'a', 'b', 'b', 'c', 'c']) );
+	console.log( twins(['a', 'a', 'b', 'c', 'd', 'd']) );
+
 
 	
 
