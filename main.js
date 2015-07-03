@@ -240,16 +240,17 @@ console.log( or([]) );
 	  		}
 	  		return 0;
 			}
-		var sortedArray = array.sort(compare())
+		var sortedArray = array.sort(compare());
 
 		var newArray = [];
 
 		// loop over array to identify unique/duplicate values
-		for (i = 0; i < sortedArray.length; i++)
+		for (i = 0; i < sortedArray.length; i++){
 		if (sortedArray[i] != sortedArray[i+1] ){
 					//push unique values to new array
 					newArray.push(array[i]);
 				}
+		}
 		return newArray
 	}
 
